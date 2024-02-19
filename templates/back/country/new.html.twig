@@ -1,0 +1,11 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Nouveau pays{% endblock %}
+
+{% block body %}
+    <h1>Nouveau pays</h1>
+
+    {{ include('back/country/_form.html.twig') }}
+
+    <a href="{{ path('app_back_country_index') }}">Retour</a>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Liste des activités{% endblock %}
+
+{% block body %}
+    <h1>Liste des activités</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Date</th>
+                <th>Adresse</th>
+                <th>Prix</th>
+                <th>Horaires d'ouverture</th>
+                <th>Score</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for activity in activities %}
+            <tr>
+                <td>{{ activity.id }}</td>
+                <td>{{ activity.name }}</td>
+                <td>{{ activity.date ? activity.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ activity.postalAddress }}</td>
+                <td>{{ activity.price }}</td>
+                <td>{{ activity.openingTimeAndDays }}</td>
+                <td>{{ activity.score }}</td>
+                <td>
+                    <a href="{{ path('app_back_activity_show', {'id': activity.id}) }}" class="btn btn-info btn-sm">Détail</a>
+                    <a href="{{ path('app_back_activity_edit', {'id': activity.id}) }}" class="btn btn-warning btn-sm">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">Pas d'activité trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_back_activity_new') }}" class="btn btn-success">Nouvelle activité</a>
+{% endblock %}

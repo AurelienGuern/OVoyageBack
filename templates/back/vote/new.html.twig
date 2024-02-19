@@ -1,0 +1,11 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Nouveau vote{% endblock %}
+
+{% block body %}
+    <h1>Nouveau vote</h1>
+
+    {{ include('back/vote/_form.html.twig') }}
+
+    <a href="{{ path('app_back_vote_index') }}">Retour</a>
+{% endblock %}

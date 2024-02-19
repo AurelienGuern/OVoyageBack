@@ -1,0 +1,30 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Item{% endblock %}
+
+{% block body %}
+    <h1>Item</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ item.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ item.name }}</td>
+            </tr>
+            <tr>
+                <th>Validé</th>
+                <td>{{ item.checked ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_back_item_index') }}">retour</a>
+
+    <a href="{{ path('app_back_item_edit', {'id': item.id}) }}">modifier</a>
+
+    {{ include('back/item/_delete_form.html.twig') }}
+{% endblock %}

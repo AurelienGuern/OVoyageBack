@@ -1,0 +1,13 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Modifier ami {% endblock %}
+
+{% block body %}
+    <h1>Modifier ami </h1>
+
+    {{ include('back/friend/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_back_friend_index') }}">Retour</a>
+
+    {{ include('back/friend/_delete_form.html.twig') }}
+{% endblock %}

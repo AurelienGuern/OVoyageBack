@@ -1,0 +1,5 @@
+70b445,::1,GET,http://localhost/projet-o-voyage-back/public/api/login_check,1707315300,891b25,500,request
+891b25,::1,GET,http://localhost/projet-o-voyage-back/public/api/login_check,1707315300,,500,request
+6b214c,::1,GET,http://localhost/projet-o-voyage-back/public/api/login_check,1707315345,,200,request
+34a6ab,::1,GET,http://localhost/projet-o-voyage-back/public/api/activity/1,1707315573,,200,request
+c2547e,::1,GET,http://localhost/projet-o-voyage-back/public/api/login_check,1707469216,,200,request

@@ -1,0 +1,11 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Nouvel ami{% endblock %}
+
+{% block body %}
+    <h1>Nouvel ami</h1>
+
+    {{ include('back/friend/_form.html.twig') }}
+
+    <a href="{{ path('app_back_friend_index') }}">retour</a>
+{% endblock %}

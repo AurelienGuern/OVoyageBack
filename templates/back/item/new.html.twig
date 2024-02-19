@@ -1,0 +1,11 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Nouvel Item{% endblock %}
+
+{% block body %}
+    <h1>Nouvel Item</h1>
+
+    {{ include('back/item/_form.html.twig') }}
+
+    <a href="{{ path('app_back_item_index') }}">Retour</a>
+{% endblock %}

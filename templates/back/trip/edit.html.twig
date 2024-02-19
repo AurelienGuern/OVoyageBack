@@ -1,0 +1,13 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Modifier le voyage {{trip.name}}{% endblock %}
+
+{% block body %}
+    <h1>Modifier le voyage {{trip.name}}</h1>
+
+    {{ include('back/trip/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_back_trip_index') }}">Retour</a>
+
+    {{ include('back/trip/_delete_form.html.twig') }}
+{% endblock %}

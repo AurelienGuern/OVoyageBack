@@ -1,0 +1,13 @@
+{% extends 'back/base_back.html.twig' %}
+
+{% block title %}Modi Vote{% endblock %}
+
+{% block body %}
+    <h1>Modifier le vote</h1>
+
+    {{ include('back/vote/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_back_vote_index') }}">Retour</a>
+
+    {{ include('back/vote/_delete_form.html.twig') }}
+{% endblock %}
